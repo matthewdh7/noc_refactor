@@ -1,5 +1,4 @@
 `include "bsg_defines.v"
-`include "noc_interfaces.sv"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -23,7 +22,7 @@ module bsg_noc_crossbar_network_unmanaged_hop
 , parameter resp_ports_p = -1
 , parameter resp_i_fifo_els_p = 2
 
-, parameter addr_width_p = -1
+, parameter addr_width_p = -1 //TODO: replace instances with local_addr_width
 , parameter data_width_p = -1
 
 , parameter req_addr_width_p = lg_req_ports_lp + local_addr_width_p
